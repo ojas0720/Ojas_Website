@@ -57,19 +57,6 @@ Welcome to my personal portfolio! I'm **Ojas Shinde**, a passionate Data Analyti
 - **Data Analytics**: Pandas, NumPy, Tableau, Power BI, Matplotlib
 - **Machine Learning**: Scikit-learn, TensorFlow, PyTorch, OpenCV
 
-### 🎓 Education
-- **Master of Computer Applications (MCA)** - VTU, Belagavi (CGPA: 9.02/10.0)
-- **Bachelor of Computer Applications (BCA)** - Govindram Seksaria College (CGPA: 7.81/10.0)
-
-### 💼 Experience
-- **Data Analytics Intern** - Leosias Technologies (Nov 2024 – Apr 2025)
-- **Data Analytics Trainee** - MedTourEasy (Sept 2024 – Oct 2024)
-
-### 📞 Contact
-- Direct contact form with EmailJS integration
-- Social media links
-- Professional email and phone
-
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -208,13 +195,6 @@ While this is a personal portfolio, suggestions and feedback are welcome!
 This project is open source and available under the [MIT License](LICENSE).
 
 ## 📞 Contact
-
-**Ojas Shinde**
-- 📧 Email: ojasshinde85@gmail.com
-- 💼 LinkedIn: [linkedin.com/in/ojasshinde](http://www.linkedin.com/in/ojasshinde)
-- 🐙 GitHub: [github.com/ojas0720](https://github.com/ojas0720)
-- 📸 Instagram: [instagram.com/_os_0702_](https://www.instagram.com/_os_0702_?igsh=d2p1d3g3ZXU2ZXZm)
-- 📍 Location: Bangalore, Karnataka
 
 ---
 
