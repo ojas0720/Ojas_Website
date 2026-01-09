@@ -1,0 +1,69 @@
+OJAS SHINDE
++91-6362475600 | ojasshinde85@gmail.com | Bangalore, Karnataka
+http://www.linkedin.com/in/ojasshinde | https://github.com/ojas0720
+EDUCATION:
+ Master of Computer Applications (MCA) Visvesvaraya Technological University,
+Belagavi, Karnataka Graduated: 2025 | CGPA: 9.02 / 10.0
+ Bachelor of Computer Applications (BCA) Govindram Seksaria Science Degree College,
+Belagavi, Karnataka Graduated: 2023 | CGPA: 7.81 / 10.0
+TECHNICAL SKILLS:
+Languages: Python, SQL, Bash (Shell Scripting), Java, JavaScript, C++.
+Web & Frameworks: Next.js 14, React, Tailwind CSS, Flask.
+Big Data & Data Engineering: Apache Spark (PySpark), Apache Kafka, Hadoop, MongoDB, MySQL,
+PostgreSQL.
+DevOps & Cloud: AWS (EC2, S3), Docker, Git, Google Cloud (TTS), Clerk Auth, Stripe API.
+Data Analysis & Visualization: Pandas, NumPy, Tableau, Power BI, Matplotlib, Seaborn, Jupyter
+Notebooks, Apache Zeppelin.
+Machine Learning: Scikit-learn, TensorFlow, PyTorch, OpenCV.
+EXPERIENCE
+1. Data Analytics Intern | Leosias Technologies, Belagavi | Nov 2024 – Apr 2025
+ Engineered data pipelines and ETL workflows using Python (Pandas, NumPy) and SQL.
+ Developed interactive Power BI/Tableau dashboards, improving decision-making efficiency.
+2. Data Analytics Trainee | MedTourEasy | Sept 2025 – Oct 2025
+ Executed real-world analytics projects focusing on predictive modeling and chemical component
+analysis.
+ Applied advanced data wrangling and visualization techniques to solve complex data problems.
+PROJECTS
+1.AI-Powered Document Assistant (RAG) | Python, LangChain, Docker, AWS EC2, Git
+ Developed a Generative AI application using LangChain and OpenAI to enable natural language
+querying of unstructured PDF data.
+ Containerized the application using Docker to ensure consistent runtime environments and
+deployed the Streamlit frontend on AWS EC2 for scalable access.
+ Managed source code and version control using Git, optimizing the retrieval workflow to reduce
+manual lookup time by 40%.
+2.Customer Churn Prediction with Explainable AI | Python, Scikit-Learn, XGBoost, CI/CD
+ Built a Machine Learning model (XGBoost) to predict customer attrition, achieving 88% recall on
+high-risk accounts.
+ Deployed a Streamlit dashboard to visualize retention metrics, utilizing Git for iterative
+development and version tracking.
+ Automated data preprocessing pipelines using Pandas scripts to streamline model retraining
+workflows.
+3. Interactive Language Learning SaaS | Next.js 14, PostgreSQL, Google Cloud, Docker
+ Architected a scalable relational database schema using Neon PostgreSQL and Drizzle ORM to
+manage complex data relationships, optimizing query performance for tracking user progress.
+ Integrated Google Cloud Text-to-Speech API for AI-driven features and Clerk for secure
+authentication, utilizing Next.js 14 Server Actions to enhance application performance.
+ Developed an analytics-driven Admin Dashboard to monitor user engagement metrics and
+deployed the application with Stripe payment integration, ensuring production-grade availability.
+4. Voice-Based Messaging System for Visually Impaired | Python, PostgreSQL, Speech APIs
+ Engineered a Python-based accessible communication platform using PostgreSQL (Neon Cloud)
+to securely manage user sessions and persistent message storage.
+ Integrated real-time Speech Recognition and Text-to-Speech pipelines to convert unstructured
+audio streams into structured text data for automated email dispatching.
+ Implemented WCAG-compliant accessibility standards (ARIA, Keyboard Navigation) and
+optimized backend logic for low-latency audio processing and response.
+5. CityLife Insurance Dashboard Project | Power BI, DAX, Excel, Data Modeling
+ Designed a comprehensive Business Intelligence architecture featuring 360-degree analysis
+dashboards to visualize complex insurance operations and customer acquisition metrics.
+ Engineered a specialized Data Validation Dashboard to automate anomaly detection and
+consistency checks, ensuring high-fidelity data integrity across all reporting modules.
+ Developed interactive Sales Performance and Visual Analytics dashboards using Power BI,
+translating raw transactional data into actionable KPIs and revenue trend analysis for executive
+decision-making.
+CERTIFICATION
+ Google Data Analytics Professional Certificate - Coursera, 2025
+ AWS - Solutions Architecture Job Simulation – Forage, 2025
+ Tata - GenAI Powered Data Analytics Job Simulation – Forage 2025
+ Deloitte Data Analytics Virtual Job Simulation - Forage, 2025
+ Deloitte Technology Consulting Virtual Job Simulation - Forage, 2025
+ Internshala Web Development Training -2024
