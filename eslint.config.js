@@ -30,4 +30,22 @@ export default [
       ],
     },
   },
+  {
+    files: ['**/__tests__/**/*.{js,jsx}', '**/*.test.{js,jsx}', '**/*.spec.{js,jsx}'],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.jest,
+      },
+    },
+  },
+  {
+    files: ['**/setupTests.js'],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+        global: 'writable',
+      },
+    },
+  },
 ]

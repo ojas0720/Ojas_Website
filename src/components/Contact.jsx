@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import emailjs from '@emailjs/browser';
+import { personalInfo, socialLinks, emailConfig } from '../data/personalData';
 
 const Contact = () => {
   const ref = useRef(null);
@@ -57,9 +58,9 @@ const Contact = () => {
       from_name: formData.name,
       from_email: formData.email,
       message: formData.message,
-      to_email: 'goudnithin77@gmail.com',
+      to_email: emailConfig.recipientEmail,
       date_time: formattedDate,
-      user_login: 'nithinmanda'
+      user_login: emailConfig.userLogin
     };
 
     emailjs.send(serviceId, templateId, templateParams)
@@ -143,8 +144,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-medium text-sm mb-1">Email</h4>
-                  <a href="mailto:goudnithin77@gmail.com" className="text-muted hover:text-light transition-colors">
-                    goudnithin77@gmail.com
+                  <a href={`mailto:${personalInfo.email}`} className="text-muted hover:text-light transition-colors">
+                    {personalInfo.email}
                   </a>
                 </div>
               </motion.div>
@@ -160,8 +161,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-medium text-sm mb-1">Phone</h4>
-                  <a href="tel:+919912491246" className="text-muted hover:text-light transition-colors">
-                    +91 9912491246
+                  <a href={`tel:${personalInfo.phone}`} className="text-muted hover:text-light transition-colors">
+                    {personalInfo.phone}
                   </a>
                 </div>
               </motion.div>
@@ -179,7 +180,7 @@ const Contact = () => {
                   <h4 className="font-medium text-sm mb-1">Connect</h4>
                   <div className="flex gap-3 mt-2">
                     {/* GitHub */}
-                    <a href="https://github.com/nithinmanda" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                    <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
                       <span className="sr-only">GitHub</span>
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 2C6.477 2 2 6.477 2 12C2 16.418 4.865 20.166 8.84 21.49C9.34 21.581 9.522 21.276 9.522 21.008C9.522 20.766 9.513 20.011 9.508 19.172C6.726 19.791 6.143 17.898 6.143 17.898C5.699 16.754 5.064 16.451 5.064 16.451C4.187 15.818 5.131 15.829 5.131 15.829C6.104 15.898 6.626 16.868 6.626 16.868C7.498 18.412 8.974 17.945 9.541 17.687C9.63 17.058 9.888 16.592 10.175 16.32C7.956 16.046 5.62 15.233 5.62 11.477C5.62 10.386 6.01 9.491 6.646 8.787C6.546 8.531 6.202 7.57 6.747 6.181C6.747 6.181 7.563 5.908 9.497 7.211C10.29 7.002 11.151 6.898 12.001 6.894C12.849 6.899 13.71 7.002 14.505 7.211C16.437 5.908 17.252 6.181 17.252 6.181C17.798 7.57 17.454 8.531 17.354 8.787C17.991 9.491 18.379 10.386 18.379 11.477C18.379 15.246 16.038 16.044 13.813 16.313C14.172 16.647 14.492 17.308 14.492 18.313C14.492 19.754 14.479 20.674 14.479 21.007C14.479 21.278 14.659 21.586 15.167 21.49C19.137 20.162 22 16.418 22 12C22 6.477 17.523 2 12 2Z" fill="#F5F5F5" />
@@ -187,18 +188,18 @@ const Contact = () => {
                     </a>
 
                     {/* LinkedIn */}
-                    <a href="https://www.linkedin.com/in/nithin-manda" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                    <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
                       <span className="sr-only">LinkedIn</span>
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M20.447 20.452H16.893V14.883C16.893 13.555 16.866 11.846 15.041 11.846C13.217 11.846 12.934 13.291 12.934 14.785V20.452H9.38V9H12.764V10.561H12.813C13.288 9.661 14.448 8.711 16.181 8.711C19.782 8.711 20.448 11.081 20.448 14.166V20.452H20.447ZM5.339 7.433C4.193 7.433 3.274 6.507 3.274 5.368C3.274 4.23 4.194 3.305 5.339 3.305C6.482 3.305 7.404 4.23 7.404 5.368C7.404 6.507 6.483 7.433 5.339 7.433ZM7.119 20.452H3.555V9H7.119V20.452Z" fill="#F5F5F5" />
                       </svg>
                     </a>
 
-                    {/* Twitter */}
-                    <a href="https://x.com/kaushal_dev_" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-                      <span className="sr-only">Twitter</span>
+                    {/* Instagram */}
+                    <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                      <span className="sr-only">Instagram</span>
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M18.244 2.25H21.552L14.325 10.51L22.827 21.75H16.17L10.956 14.933L4.99 21.75H1.68L9.41 12.915L1.254 2.25H8.08L12.793 8.481L18.244 2.25ZM17.099 19.77H18.979L7.055 4.126H5.028L17.099 19.77Z" fill="#F5F5F5" />
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="#F5F5F5" />
                       </svg>
                     </a>
                   </div>

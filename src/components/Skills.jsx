@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { skills } from '../data/personalData.js';
 
 const Skills = () => {
   const ref = useRef(null);
@@ -8,19 +9,27 @@ const Skills = () => {
   const categories = [
     {
       name: "Frontend",
-      skills: ["React.js", "React Native", "Next.js", "TypeScript", "JavaScript", "HTML", "CSS", "Tailwind CSS"]
+      skills: skills.frontend
     },
     {
       name: "Backend",
-      skills: ["Node.js", "Express.js", "Python", "C++", "REST APIs", "WebSockets"]
+      skills: skills.backend
     },
     {
-      name: "Database",
-      skills: ["SQL", "Prisma", "MongoDB", "DynamoDB", "PostgreSQL"]
+      name: "Database & Big Data",
+      skills: skills.database
     },
     {
-      name: "DevOps & Tools",
-      skills: ["AWS Lambda", "Git", "BeautifulSoup", "Google Gemini API"]
+      name: "DevOps & Cloud",
+      skills: skills.devopsAndTools
+    },
+    {
+      name: "Data Analytics",
+      skills: skills.dataAnalytics
+    },
+    {
+      name: "Machine Learning",
+      skills: skills.machineLearning
     }
   ];
 
@@ -42,7 +51,7 @@ const Skills = () => {
   return (
     <section id="skills" className="section-padding bg-secondary">
       <div className="container-custom" ref={ref}>
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -53,15 +62,15 @@ const Skills = () => {
           <div className="w-16 h-[2px] bg-light opacity-50"></div>
         </motion.div>
 
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
           {categories.map((category, i) => (
-            <motion.div 
-              key={i} 
+            <motion.div
+              key={i}
               className="border border-muted border-opacity-20 bg-primary bg-opacity-40 p-6"
               variants={itemVariants}
             >
@@ -70,13 +79,13 @@ const Skills = () => {
               </h3>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, j) => (
-                  <motion.span 
-                    key={j} 
+                  <motion.span
+                    key={j}
                     className="text-sm bg-secondary px-3 py-1 rounded-sm"
-                    whileHover={{ 
-                      y: -2, 
-                      backgroundColor: "rgba(245, 245, 245, 0.05)", 
-                      transition: { duration: 0.2 } 
+                    whileHover={{
+                      y: -2,
+                      backgroundColor: "rgba(245, 245, 245, 0.05)",
+                      transition: { duration: 0.2 }
                     }}
                   >
                     {skill}
@@ -87,7 +96,7 @@ const Skills = () => {
           ))}
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="mt-16 flex flex-col md:flex-row items-center justify-between p-6 border border-muted border-opacity-20 bg-primary bg-opacity-40"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}

@@ -1,33 +1,10 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { education, achievements, workExperience, certifications } from '../data/personalData';
 
 const Education = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
-
-  const education = [
-    {
-      institution: "Vasavi College of Engineering",
-      degree: "Bachelor of Engineering",
-      field: "Electronics and Communication Engineering (ECE)",
-      period: "2019-2023"
-    },
-    {
-      institution: "Sri Chaitanya Junior College",
-      degree: "Intermediate",
-      field: "MPC",
-      period: "2017-2019"
-    }
-  ];
-
-  const achievements = [
-    "Winner – IWD Hackathon by Google Developer Group Hyderabad",
-    "4* Coder on CodeChef, solved 600+ DSA problems across platforms like LeetCode, CodeChef, and CSES",
-    "CodeChef Student Chapter & GDG CP Lead – Led competitive programming events and workshops",
-    "National Handball Goalkeeper – Kendriya Vidyalaya",
-    "2019 National & Indian National Mathematics Olympiad (INMO) Regionalist",
-    "Participated in Hackathon conducted by VIIT ACM Chapter"
-  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -79,11 +56,57 @@ const Education = () => {
                 >
                   <div className="absolute w-3 h-3 bg-primary border border-light rounded-full -left-[7px] top-1"></div>
                   <h4 className="text-lg font-medium mb-1">{edu.institution}</h4>
-                  <p className="text-muted mb-1">{edu.degree} {edu.field && `- ${edu.field}`}</p>
-                  {edu.period && <p className="text-sm font-mono text-light opacity-70">{edu.period}</p>}
+                  <p className="text-muted mb-1">
+                    {edu.degree}{edu.field && ` - ${edu.field}`}
+                  </p>
+                  {edu.graduationDate && (
+                    <p className="text-sm font-mono text-light opacity-70">{edu.graduationDate}</p>
+                  )}
+                  {edu.gpa && (
+                    <p className="text-sm text-light opacity-80 mt-1">GPA: {edu.gpa}</p>
+                  )}
+                  {edu.honors && (
+                    <p className="text-sm text-light opacity-80 mt-1">{edu.honors}</p>
+                  )}
                 </motion.div>
               ))}
             </div>
+
+            {/* Work Experience Section */}
+            {workExperience && workExperience.length > 0 && (
+              <div className="mt-12">
+                <h3 className="text-xl font-medium mb-6 flex items-center">
+                  <div className="w-4 h-4 border border-light mr-3"></div>
+                  Work Experience
+                </h3>
+                <div className="space-y-8">
+                  {workExperience.map((work, i) => (
+                    <motion.div
+                      key={i}
+                      className="border-l-2 border-muted border-opacity-30 pl-6 relative"
+                      variants={itemVariants}
+                    >
+                      <div className="absolute w-3 h-3 bg-primary border border-light rounded-full -left-[7px] top-1"></div>
+                      <h4 className="text-lg font-medium mb-1">{work.position}</h4>
+                      <p className="text-muted mb-1">{work.company}</p>
+                      {work.duration && (
+                        <p className="text-sm font-mono text-light opacity-70 mb-2">{work.duration}</p>
+                      )}
+                      {work.responsibilities && work.responsibilities.length > 0 && (
+                        <ul className="text-sm text-light opacity-80 space-y-1">
+                          {work.responsibilities.map((resp, idx) => (
+                            <li key={idx} className="flex items-start">
+                              <span className="mr-2 opacity-60">•</span>
+                              <span>{resp}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            )}
           </motion.div>
 
           <motion.div
@@ -108,6 +131,35 @@ const Education = () => {
                 </motion.li>
               ))}
             </ul>
+
+            {/* Certifications Section */}
+            {certifications && certifications.length > 0 && (
+              <div className="mt-8">
+                <h3 className="text-xl font-medium mb-6 flex items-center">
+                  <div className="w-4 h-4 border border-light mr-3"></div>
+                  Certifications
+                </h3>
+                <div className="space-y-4">
+                  {certifications.map((cert, i) => (
+                    <motion.div
+                      key={i}
+                      className="border-l-2 border-muted border-opacity-30 pl-4 relative"
+                      variants={itemVariants}
+                    >
+                      <div className="absolute w-2 h-2 bg-light rounded-full -left-[5px] top-2"></div>
+                      <h4 className="text-base font-medium mb-1">{cert.name}</h4>
+                      <p className="text-muted text-sm mb-1">{cert.issuer}</p>
+                      {cert.date && (
+                        <p className="text-xs font-mono text-light opacity-70">{cert.date}</p>
+                      )}
+                      {cert.credentialId && (
+                        <p className="text-xs text-light opacity-60 mt-1">ID: {cert.credentialId}</p>
+                      )}
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            )}
 
             <motion.div
               className="mt-8 p-4 border border-muted border-opacity-20 bg-secondary bg-opacity-30"
